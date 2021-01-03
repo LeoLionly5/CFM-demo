@@ -1,12 +1,15 @@
 <div class="container">
 
 
-    <h4 class="page-title">Movie List</h4>
-
-    <a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-xs" (click)="add()"><i class="fa fa-plus"> </i></a>
-    <a class="btn btn-primary btn-xs" (click)="edit()"><i class="fa fa-edit"> </i></a>
-    <a class="btn btn-danger btn-xs" (click)="delete()"><i class="fa fa-trash"> </i></a>
-    <a class="btn btn-success btn-xs" (click)="searchAddata()"><i class="fa fa-refresh"> </i></a>
+    <!-- <h4 class="page-title">Contact List</h4> -->
+    <br><br>
+    <div class="row">
+      <a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-xs" (click)="add()"><i class="fa fa-plus"> </i></a>
+      <a class="btn btn-primary btn-xs" (click)="edit()"><i class="fa fa-edit"> </i></a>
+      <a class="btn btn-danger btn-xs" (click)="delete()"><i class="fa fa-trash"> </i></a>
+      <!-- <a class="btn btn-success btn-xs" (click)="searchAddata()"><i class="fa fa-refresh"> </i></a> -->
+    </div>
+    <br>
       <div class="row">
         <ag-grid-angular
         #agGrid
