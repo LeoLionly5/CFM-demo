@@ -1,0 +1,84 @@
+<div class="container">
+
+
+    <h4 class="page-title">Movie List</h4>
+
+    <a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-xs" (click)="add()"><i class="fa fa-plus"> </i></a>
+    <a class="btn btn-primary btn-xs" (click)="edit()"><i class="fa fa-edit"> </i></a>
+    <a class="btn btn-danger btn-xs" (click)="delete()"><i class="fa fa-trash"> </i></a>
+    <a class="btn btn-success btn-xs" (click)="searchAddata()"><i class="fa fa-refresh"> </i></a>
+      <div class="row">
+        <ag-grid-angular
+        #agGrid
+        style="width: 95%; height: 40em;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+    >
+    </ag-grid-angular>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">
+          </h4>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            &times;
+          </button>
+        </div>
+    <div class="modal-body">
+
+      <!-- id: number, 
+        nom : string,
+        prénom : string,
+        date_de_naissance : string,
+        numéro_de_téléphone: string,
+        type_d_adresse: string,
+        voie: string,
+        rue: string,
+        numéro: string,
+        ville: string,
+        cp: string,
+        pays: string,
+        commentaire: string -->
+      <br>
+      <label class="input-label">nom:</label>
+      <input [(ngModel)] = "addata.nom"/>
+      <br><br>
+      <label class="input-label">prénom:</label>
+      <input [(ngModel)] = "addata.prenom" />
+      <br><br>
+      <label class="input-label">date_de_naissance:</label>
+      <input [(ngModel)]="addata.date_de_naissance">
+      <br><br>
+      <label id="movieidlabel" class="input-label">numéro_de_téléphone:</label>
+      <input [(ngModel)] = "addata.numero_de_telephone"/>
+      <label id="movieidlabel" class="input-label">type_d_adresse:</label>
+      <input [(ngModel)] = "addata.type_d_adresse"/>
+      <label id="movieidlabel" class="input-label">voie:</label>
+      <input [(ngModel)] = "addata.voie"/>
+      <label id="movieidlabel" class="input-label">rue:</label>
+      <input [(ngModel)] = "addata.rue"/>
+      <label id="movieidlabel" class="input-label">numéro:</label>
+      <input [(ngModel)] = "addata.numero"/>
+      <label id="movieidlabel" class="input-label">ville:</label>
+      <input [(ngModel)] = "addata.ville"/>
+      <label id="movieidlabel" class="input-label">cp:</label>
+      <input [(ngModel)] = "addata.cp"/>
+      <label id="movieidlabel" class="input-label">pays:</label>
+      <input [(ngModel)] = "addata.pays"/>
+      <label id="movieidlabel" class="input-label">commentaire:</label>
+      <input [(ngModel)] = "addata.commentaire"/>
+    </div>
+        <div class="modal-footer">
+          <a class="btn btn-sm" data-dismiss="modal" aria-hidden="true">cancel</a>
+          <a data-dismiss="modal" aria-hidden="true" (click)="save()" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
